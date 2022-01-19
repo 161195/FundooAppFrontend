@@ -1,4 +1,4 @@
-<div class = "cs-container">
+<div class = "main-container">
   <h1>
       <span class="c1">F</span>
       <span class="c2">u</span>
@@ -9,20 +9,21 @@
   </h1>
 
   <h2>Sign in</h2>
-  <div class ="tl-container">
+  <div class ="mailpass-container">
     <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="email">
-    </mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="email">
+</mat-form-field>
 
-    <div class = "psw">
-      <button class="btnps">Forgot Email?</button>
-    </div>
+<div class = "psw">
+  <button class="btnps">Forgot Email?</button>
+</div>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
-      <input matInput placeholder="password">
-     </mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Password</mat-label>
+  <input matInput placeholder="password">
+ </mat-form-field>
+   
   </div>
   <div class = "txt">
     <p>Not your computer? Use Guest mode to sign in privately.</p>
@@ -30,12 +31,11 @@
   <div class="ca">
     <button class="btnps">Learn More</button>
   </div>
-
-  <div class="tca"><button class="btnps">Create Account</button></div>
-
+  <div routerLink='/registration'>
+      <div class="tca"><button class="btnps">Create Account</button></div>
+  </div>
   <div class = "bsd">
     <button mat-raised-button >Next</button>
   </div>
- 
 </div>
 

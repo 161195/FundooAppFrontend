@@ -8,9 +8,9 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,MatFormFieldModule,MatInputModule,FormsModule,FlexLayoutModule
+    BrowserAnimationsModule,MatFormFieldModule,MatInputModule,FormsModule,FlexLayoutModule,MatCheckboxModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

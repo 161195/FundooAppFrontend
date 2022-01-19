@@ -105,7 +105,7 @@ button
     opacity: 0.8;
     color :#1E90FF
   }
- .left_image
+ .left_container
  {
     
      width:50%;
@@ -147,6 +147,7 @@ button
 .email_p1{
     font-size: small;
     color: rgb(102, 99, 99);
+   
 }
 .email_p1>p{
     margin-left: 10px;
@@ -155,14 +156,15 @@ button
 .email_p2{
     color:#1a73e8;
     font-weight: 500;
+    cursor: pointer;
+
 }
-.Password_p1{
-    font-size: small;
-    color:  rgb(102, 99, 99);
+// .Password_p1{
+//     font-size: small;
+//     color:  rgb(102, 99, 99);
     
-}
+// }
 .Password_p1>p{
     margin-top: 7px;
     margin-left: 10px;
-
 }

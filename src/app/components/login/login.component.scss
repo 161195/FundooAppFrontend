@@ -1,4 +1,4 @@
-.cs-container
+.main-container
 {
     text-align : center;
     padding: 36px;
@@ -11,7 +11,7 @@
    
 }
 
-.tl-container 
+.mailpass-container 
 {
     display: flex;
     flex-direction: column;
@@ -29,8 +29,7 @@ div.txt
   float: left;
   margin-top: -4%;
   margin-left: -4%;
- 
-  
+
 }
 h1{
     text-align: center;
@@ -64,18 +63,6 @@ h1{
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
-
-
-// .cta
-// {
-//   padding-bottom: 45px;
-//  padding-top: 0;
-//   color: #1a73e8;
-//   font-weight: 500;
-//   cursor: pointer;
-//   text-align: left;
-
-//   }
   .tca
   {
   color: #1a73e8;

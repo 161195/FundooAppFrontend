@@ -7,8 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-  registrationForm: FormGroup;
-  submitted = false;
+  registrationForm!: FormGroup;
+  submitted = true;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -18,8 +18,7 @@ export class RegistrationComponent implements OnInit {
       lastName: ['', Validators.required], 
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      // acceptTerms: [false, Validators.requiredTrue]
+      ConfirmPassword: ['', [Validators.required, Validators.minLength(6)]],
   });
   }
   registration(){

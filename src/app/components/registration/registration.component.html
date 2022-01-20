@@ -1,88 +1,85 @@
 <div class="Whole_container">
-        <div class = "cs-container">
-      
-        
-            <div class="left_container">
-                   <h1>         
-                        <span class="c1">F</span>
-                        <span class="c2">u</span>
-                        <span class="c3">n</span>
-                        <span class="c4">d</span>
-                        <span class="c5">o</span>
-                        <span class="c6">o</span>          
-                  </h1>
-                  <h2>Create Your Fundoo Account</h2>
-        
-                <div class ="tp-container">
-                    <mat-form-field appearance="outline"class="name_input">
+    <div class="cs-container">
+
+        <div class="left_container">
+            <h1>
+                <span class="c1">F</span>
+                <span class="c2">u</span>
+                <span class="c3">n</span>
+                <span class="c4">d</span>
+                <span class="c5">o</span>
+                <span class="c6">o</span>
+            </h1>
+            <h2>Create Your Fundoo Account</h2>
+
+            <form [formGroup]="registrationForm" (ngSubmit)="registration()">
+                <div class="tp-container">
+                    <mat-form-field appearance="outline" class="name_input">
                         <mat-label>First Name</mat-label>
-                        <input matInput placeholder="First Name"formControlName="FirstName">
-                      </mat-form-field>
-            
-                      <mat-form-field appearance="outline"class="name_input">
+                        <input matInput placeholder="First Name" formControlName="firstName">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="name_input">
                         <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="Last Name"formControlName="LastName">                   
-                    </mat-form-field>                  
+                        <input matInput placeholder="Last Name" formControlName="lastName">
+                    </mat-form-field>
                 </div>
-        
-            
-                <div class ="ml-container">
+
+
+                <div class="ml-container">
                     <mat-form-field class="email_input" appearance="outline">
                         <mat-label>Email</mat-label>
-                        <input matInput placeholder="Email"formControlName="email">                   
-                    </mat-form-field>    
-                      
+                        <input matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+
                 </div>
                 <span class="email_p1">
                     <p>You can use letters,numbers & periods</p>
-                  </span>
-                  <span class="email_p2">
+                </span>
+                <span class="email_p2">
                     <p>Use my current email address instead</p>
-                  </span>   
-        
-                <div class ="tp-container">
-        
-                    <mat-form-field appearance="outline"class="name_input">
+                </span>
+
+                <div class="tp-container">
+
+                    <mat-form-field appearance="outline" class="name_input">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password"formControlName="password">
-                      </mat-form-field>
-            
-                      <mat-form-field appearance="outline"class="name_input">
+                        <input matInput placeholder="Password" formControlName="password">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="name_input">
                         <mat-label>Confirm</mat-label>
-                        <input matInput placeholder="Confirm"formControlName="ConfirmPassword">                   
-                    </mat-form-field>                 
+                        <input matInput placeholder="Confirm" formControlName="ConfirmPassword">
+                    </mat-form-field>
                 </div>
-              
-        
-        
+
+
+
                 <span class="email_p1">
                     <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
                 </span>
                 <section class="example-section">
-                    <mat-checkbox class="example-margin">show password</mat-checkbox>      
+                    <mat-checkbox class="example-margin">show password</mat-checkbox>
                 </section>
-                       
+
                 <div class="Login_Left_footer">
-                    <span class="email_p2">  
+                    <span class="email_p2">
                         <div routerLink='/login'>
-                            <p>Sign in instead</p>      
-                        </div>         
+                            <p>Sign in instead</p>
+                        </div>
                     </span>
                     <button mat-raised-button color="primary">Next</button>
-                   </div>
-                </div>  
-           
-        
-                <div class="right_contianer">
-                    <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" width="250">
-                    <h3>One account. All of Google<br/> working for you.</h3>
-            
                 </div>
-            
-           </div>
- 
-          
-</div>
+            </form>
+        </div>
+    </div>
 
+    <div class="right_contianer">
+        <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" width="250">
+        <h3>One account. All of Google<br /> working for you.</h3>
+    
+    </div>
+
+</div>
 
 

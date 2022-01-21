@@ -12,16 +12,18 @@
             </h1>
             <h2>Create Your Fundoo Account</h2>
 
-            <form [formGroup]="registrationForm" (ngSubmit)="registration()">
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
                 <div class="tp-container">
                     <mat-form-field appearance="outline" class="name_input">
                         <mat-label>First Name</mat-label>
                         <input matInput placeholder="First Name" formControlName="firstName">
+                        <mat-error>enter first name</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="name_input">
                         <mat-label>Last Name</mat-label>
                         <input matInput placeholder="Last Name" formControlName="lastName">
+                        <mat-error>enter last name</mat-error>
                     </mat-form-field>
                 </div>
 
@@ -30,6 +32,7 @@
                     <mat-form-field class="email_input" appearance="outline">
                         <mat-label>Email</mat-label>
                         <input matInput placeholder="Email" formControlName="email">
+                        <mat-error>enter email</mat-error>
                     </mat-form-field>
 
                 </div>
@@ -45,11 +48,13 @@
                     <mat-form-field appearance="outline" class="name_input">
                         <mat-label>Password</mat-label>
                         <input matInput placeholder="Password" formControlName="password">
+                        <mat-error>enter password</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="name_input">
                         <mat-label>Confirm</mat-label>
                         <input matInput placeholder="Confirm" formControlName="ConfirmPassword">
+                        <mat-error>confirm your password</mat-error>
                     </mat-form-field>
                 </div>
 
@@ -72,13 +77,14 @@
                 </div>
             </form>
         </div>
+        <div class="right_contianer">
+            <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" width="250">
+            <h3>One account. All of Google<br /> working for you.</h3>
+        
+        </div>
     </div>
 
-    <div class="right_contianer">
-        <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" width="250">
-        <h3>One account. All of Google<br /> working for you.</h3>
     
-    </div>
 
 </div>
 

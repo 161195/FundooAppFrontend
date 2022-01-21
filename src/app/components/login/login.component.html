@@ -1,43 +1,56 @@
 <div class = "main-container">
   <h1>
-      <span class="c1">F</span>
-      <span class="c2">u</span>
-      <span class="c3">n</span>
-      <span class="c4">d</span>
-      <span class="c5">o</span>
-      <span class="c6">o</span>
+    <span class="c1">F</span>
+    <span class="c2">u</span>
+    <span class="c3">n</span>
+    <span class="c4">d</span>
+    <span class="c5">o</span>
+    <span class="c6">o</span>
   </h1>
 
   <h2>Sign in</h2>
-  <div class ="mailpass-container">
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="email">
-</mat-form-field>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class ="mailpass-container">
+      <!-- <div fxLayout.sm="column"> -->
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="email"formControlName="email">
+          <mat-error>enter valid email</mat-error>
+        </mat-form-field>
+    
+        <div class = "psw">
+        <div routerLink='/forgetPassword'>
+        <button class="btnps">Forgot Email?</button>
+        </div>
+        </div>
+    
+        <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="password"formControlName="password">
+        <mat-error>enter valid password</mat-error>
+        </mat-form-field>     
+      </div>
+  
+         <div class = "txt">
+         <p>Not your computer? Use Guest mode to sign in privately.</p>
+         </div>
+    
+         <div class="ca">
+         <button class="btnps">Learn More</button>
+         </div>
+    
+         <div routerLink='/registration'>
+          <div class="tca"><button class="btnps">Create Account</button></div>
+         </div>
+    
+         <div class = "bsd">
+         <button mat-raised-button >Next</button>
+         </div>
 
-<div class = "psw">
-  <div routerLink='/forgetPassword'>
-  <button class="btnps">Forgot Email?</button>
-  </div>
+      <!-- </div> -->
+     
+
+  </form>
+  
 </div>
-
-<mat-form-field appearance="outline">
-  <mat-label>Password</mat-label>
-  <input matInput placeholder="password">
- </mat-form-field>
-   
-  </div>
-  <div class = "txt">
-    <p>Not your computer? Use Guest mode to sign in privately.</p>
-  </div>
-  <div class="ca">
-    <button class="btnps">Learn More</button>
-  </div>
-  <div routerLink='/registration'>
-      <div class="tca"><button class="btnps">Create Account</button></div>
-  </div>
-  <div class = "bsd">
-    <button mat-raised-button >Next</button>
-  </div>
-</div>
-
+© 2022 GitHub, Inc.

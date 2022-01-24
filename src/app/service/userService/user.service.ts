@@ -1,4 +1,5 @@
 import { HttpHeaders } from '@angular/common/http';
+import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpService/http.service';
 
@@ -33,5 +34,14 @@ export class UserService {
     }
     return this.httpService.postService('/User/forgetPassword',data,false,header)
   }
+  userResetPassword(data:any){
+  let header={
+    headers:new HttpHeaders({
+      'Content-Type': 'application/json-patch+json',
+      Authorization :'true'
+    })
+  }
+  return this.httpService.putService('/User/ResetPassword',data,true,header)
+}
 
 }

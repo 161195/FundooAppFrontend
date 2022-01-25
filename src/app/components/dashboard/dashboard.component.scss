@@ -1,35 +1,42 @@
-h1{
-    text-align: center;
-    font-size: xx-large;
-    padding: 15px;
-}
- .c1
- {
-   color: blue;
- }
-.c2
-{
-  color: red;
-}
-.c3
-{
-  color: yellow;
-}
-.c4
-{
-  color: green;
-}
-.c5
-{
-  color: blue;
-}
-.c6
-{
-  color: yellow;
-}
 body {font-family: Arial, Helvetica, sans-serif;}
 
-.icon
-{
-    display: inline-block;
+.nav div{
+    height: 4px;
+    background-color: grey;
+    margin: 5px 0;
+    border-radius: 25px; 
+    
 }
+.nav{
+    width: 30px;
+    display: block;
+    margin: 1em 0 0 1em;
+    
+  
+}
+.one{
+    width: 30px;
+}
+.two{
+    width: 30px;
+}
+.three{
+    width: 30px;
+}
+.nav:hover{
+    width: 30px;
+      
+}
+.searching
+{
+    text-align:center ;
+    margin-left:10em;
+    margin-top: center;
+    padding-top: 21px;
+    padding-bottom:20px;
+    font-size: 15px;
+    width: 50px;
+
+}
+
+ 

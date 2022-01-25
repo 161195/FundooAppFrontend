@@ -34,11 +34,11 @@ export class UserService {
     }
     return this.httpService.postService('/User/forgetPassword',data,false,header)
   }
-  userResetPassword(data:any){
+  userResetPassword(data:any,token:any){
   let header={
     headers:new HttpHeaders({
       'Content-Type': 'application/json-patch+json',
-      Authorization :'true'
+      Authorization :'Bearer '+ token
     })
   }
   return this.httpService.putService('/User/ResetPassword',data,true,header)

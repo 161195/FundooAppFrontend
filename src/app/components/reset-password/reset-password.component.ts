@@ -31,7 +31,7 @@ export class ResetPasswordComponent implements OnInit {
       newPassWord:this.resetPasswordForm.value.password,
       confirmPassword:this.resetPasswordForm.value.ConfirmPassword,       
      }
-     this.user.userResetPassword(resetPassword).subscribe((response:any)=>{
+     this.user.userResetPassword(resetPassword,this.token).subscribe((response:any)=>{
        console.log("any msggg",response)
      })
     }

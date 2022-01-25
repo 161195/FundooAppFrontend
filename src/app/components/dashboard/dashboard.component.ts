@@ -10,6 +10,7 @@ import { UserService } from 'src/app/service/userService/user.service';
 export class DashboardComponent implements OnInit {
   dashboardForm!: FormGroup;
   submitted = true;
+  search : String ="";
 
   constructor(private formBuilder: FormBuilder,private user: UserService) { }
 

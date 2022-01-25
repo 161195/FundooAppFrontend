@@ -1,16 +1,35 @@
-<div class="icon" fxLayout="row" fxLayoutAlign="start none" >
-    
-    <!-- <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-       -->
-    <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" width:1000px>
-    <h1>
-        <span class="c1">F</span>
-        <span class="c2">u</span>
-        <span class="c3">n</span>
-        <span class="c4">d</span>
-        <span class="c5">o</span>
-        <span class="c6">o</span>
-      </h1>
-</div>
+<div class="icon" fxLayout="row" fxLayoutAlign=" none">
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>
+                <!-- menu -->
+                <a href="#" class="nav">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </a>
+            </mat-icon>
+        </button>
+        <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" width:1000px>
+        <span>Fundoo</span>
+        <!-- Search form -->
+        <!-- <form class="form-inline waves-light">
+            <div class="searching">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            </div>
+        </form> -->
+        <div class="searching">
+            <form class="example-form"  >
+                <mat-form-field>
+                    <span matPrefix> </span>
+                    <input type="tel" matInput placeholder="Search" name="search" [(ngModel)]="search" >
+                    <button matSuffix mat-button>
+                        <mat-icon>search</mat-icon>
+                    </button>
+                </mat-form-field>
+                <br />
+                {{search}}
+            </form>      
+        </div>    
+    </mat-toolbar>
+</div> 

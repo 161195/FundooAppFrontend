@@ -1,42 +1,54 @@
-body {font-family: Arial, Helvetica, sans-serif;}
 
-.nav div{
-    height: 4px;
-    background-color: grey;
-    margin: 5px 0;
-    border-radius: 25px; 
-    
-}
-.nav{
-    width: 30px;
-    display: block;
-    margin: 1em 0 0 1em;
-    
-  
-}
-.one{
-    width: 30px;
-}
-.two{
-    width: 30px;
-}
-.three{
-    width: 30px;
-}
-.nav:hover{
-    width: 30px;
-      
-}
-.searching
-{
-    text-align:center ;
-    margin-left:10em;
-    margin-top: center;
-    padding-top: 21px;
-    padding-bottom:20px;
+.Search{
+    margin-left: 10em;
+    margin-top: 1em;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 15px;
-    width: 50px;
-
+    border-right-width: 30em;
+}
+.fundoo{
+    font-size: x-large;
+    color: rgb(92, 84, 84);
+}
+.header-container{
+    height: 10%;
+    padding-top: 5px;
+    padding-bottom: 60px;
+    margin-top: 1em;
 }
 
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    flex: 1 0 auto;
+  }
+  .refresh{
+    margin-left: 10em;
+    opacity: 0.5;
+    border: 5px solid transparent;
+
+  }
  

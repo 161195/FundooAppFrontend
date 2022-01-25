@@ -17,6 +17,8 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserAnimationsModule,MatFormFieldModule,MatInputModule,FormsModule,FlexLayoutModule,MatCheckboxModule,ReactiveFormsModule,
     HttpClientModule,
     MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

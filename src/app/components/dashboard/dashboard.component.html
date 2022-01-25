@@ -1,35 +1,37 @@
-<div class="icon" fxLayout="row" fxLayoutAlign=" none">
-    <mat-toolbar>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>
-                <!-- menu -->
-                <a href="#" class="nav">
-                    <div class="one"></div>
-                    <div class="two"></div>
-                    <div class="three"></div>
-                </a>
-            </mat-icon>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
         </button>
-        <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" width:1000px>
-        <span>Fundoo</span>
-        <!-- Search form -->
-        <!-- <form class="form-inline waves-light">
-            <div class="searching">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            </div>
-        </form> -->
-        <div class="searching">
-            <form class="example-form"  >
-                <mat-form-field>
-                    <span matPrefix> </span>
-                    <input type="tel" matInput placeholder="Search" name="search" [(ngModel)]="search" >
-                    <button matSuffix mat-button>
-                        <mat-icon>search</mat-icon>
-                    </button>
-                </mat-form-field>
-                <br />
-                {{search}}
-            </form>      
-        </div>    
+        <div class="header-container">
+            <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" width="45">
+        </div>
+        <h1 class="fundoo">Fundoo</h1>
+        <div class="Search">
+            <mat-form-field appearance="outline" [style.width.px]="600">
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search">
+            </mat-form-field>
+        </div>
+        <div class="refresh"id="refresh" fxLayout="row">
+            <button mat-icon-button matTooltip="refresh" (click)="refreshButton()" >
+                <mat-icon>refresh</mat-icon>
+            </button>
+        </div>
     </mat-toolbar>
-</div> 
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list>
+                <div class="Button" fxLayout="row">
+                    <mat-icon class="icon">lightbulb</mat-icon>
+                    <mat-list-item>Notes</mat-list-item>
+                </div>
+            </mat-nav-list>
+        </mat-sidenav>
+
+
+        <!-- <mat-sidenav-content>
+        </mat-sidenav-content> -->
+    </mat-sidenav-container>
+</div>

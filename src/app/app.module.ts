@@ -19,6 +19,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
+import { CreateNotesComponent } from './components/create-notes/create-notes.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import {MatListModule} from '@angular/material/list';
+import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
+import {MatCardHarness} from '@angular/material/card/testing';
 
 @NgModule({
   declarations: [
@@ -27,8 +32,10 @@ import {MatIconModule} from '@angular/material/icon';
     RegistrationComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    DashboardComponent
-    
+    DashboardComponent,
+    CreateNotesComponent,
+    GetAllNotesComponent,
+    DisplayNotesComponent 
   ],
   imports: [
     BrowserModule,
@@ -38,8 +45,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    
-
+    MatListModule,
+   
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

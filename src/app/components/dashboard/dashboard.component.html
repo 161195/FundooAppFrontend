@@ -1,37 +1,66 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar class="example-toolbar">
-        <button mat-icon-button (click)="snav.toggle()">
-            <mat-icon>menu</mat-icon>
+<div class="dashboard-container">
+    <mat-toolbar>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();" style="color: grey;">menu</mat-icon>
         </button>
         <div class="header-container">
             <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" width="45">
         </div>
-        <h1 class="fundoo">Fundoo</h1>
+        <span class="fundoo">Fundoo</span>
         <div class="Search">
             <mat-form-field appearance="outline" [style.width.px]="600">
                 <mat-label>Search</mat-label>
                 <input matInput placeholder="Search">
             </mat-form-field>
         </div>
-        <div class="refresh"id="refresh" fxLayout="row">
-            <button mat-icon-button matTooltip="refresh" (click)="refreshButton()" >
+        <div class="refresh" id="refresh" fxLayout="row">
+            <button mat-icon-button matTooltip="refresh" (click)="refreshButton()">
                 <mat-icon>refresh</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="settings">
+                <mat-icon>settings</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="grid">
+                <mat-icon>line_weight</mat-icon>
             </button>
         </div>
     </mat-toolbar>
-    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
-            fixedTopGap="56">
-            <mat-nav-list>
-                <div class="Button" fxLayout="row">
-                    <mat-icon class="icon">lightbulb</mat-icon>
-                    <mat-list-item>Notes</mat-list-item>
-                </div>
-            </mat-nav-list>
+    <mat-sidenav-container style=" height: 88vh;" >
+        <mat-sidenav #sidenav style="width: 240px;" mode="side" [opened]="true">
+            <div class="menu-container">
+                <mat-nav-list>
+                    <div>
+                        <button mat-button id="sidenav-button">
+                            <mat-icon id="sidenav-icon">lightbulb_outline</mat-icon>
+                            Notes
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button id="sidenav-button">
+                            <mat-icon id="sidenav-icon">notifications_none</mat-icon>
+                            Reminder
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button id="sidenav-button">
+                            <mat-icon id="sidenav-icon">archive</mat-icon>
+                            Archive
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button id="sidenav-button">
+                            <mat-icon id="sidenav-icon">delete</mat-icon>
+                            Trash
+                        </button>
+                    </div>
+                </mat-nav-list>
+            </div>
         </mat-sidenav>
+        
+    <mat-sidenav-content>
+        <router-outlet>
 
-
-        <!-- <mat-sidenav-content>
-        </mat-sidenav-content> -->
+        </router-outlet>
+    </mat-sidenav-content>   
     </mat-sidenav-container>
 </div>

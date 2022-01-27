@@ -47,7 +47,7 @@ userCreateNotes(data:any,token:any){
   let header={
     headers:new HttpHeaders({
       'Content-Type': 'application/json-patch+json',
-      Authorization :'Bearer '+ token
+     // Authorization :'Bearer '+ token
     })
   }
   return this.httpService.postService('/Note',data,true,header)

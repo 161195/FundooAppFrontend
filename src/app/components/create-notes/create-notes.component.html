@@ -1,47 +1,32 @@
-<!-- <p>create-notes works!</p> -->
-<div class="whole-container">
-    <div class="card-list-view">
-        <mat-card *ngIf="!card" class="border1">
-        <input placeholder="Take a note..." class="input" (click)="cardSwap()" />
-        </mat-card> 
-        <mat-card class="list-view-mat-card" *ngIf="card">          
-            <form [formGroup]="createNotesForm" (ngSubmit)="onSubmit()">      
-                <mat-form-field appearance="outline"class="inner-container">
-                        <!-- <input matInput placeholder="Title"> -->
-                        <div>
-                            <textarea matInput placeholder="Title" class="input" formControlName="title"
-                                matTextareaAutosize></textarea>
-                        </div>
-                    <div>
-                        <textarea matInput placeholder="Take a note..." class="input" matTextareaAutosize
-                            formControlName="description" style="font-size: 12px;"></textarea>
-                    </div>
-                    <!-- <input placeholder="Title" class="input"/>
-                    <input placeholder="Take a note..." class="input"/> --> 
-                    
-                    <div class="border">
-                        <button margin="14px" mat-icon-button background-color: transparent>
-                            <mat-icon >notifications_paused</mat-icon>
-                        </button>
-                        <button margin="14px" mat-icon-button >
-                            <mat-icon>person_add</mat-icon>
-                        </button>
-                        <button margin="14px" mat-icon-button>
-                            <mat-icon>color_lens</mat-icon>
-                        </button>
-                        <button margin="14px" mat-icon-button>
-                            <mat-icon>crop_original</mat-icon>
-                        </button>
-                        <button margin="14px" mat-icon-button>
-                            <mat-icon>archive</mat-icon>
-                        </button>
-                        <button mat-button class="nav-button" (click)="cardSwap()" style="margin-left: 12%;">
-                        Close
-                    </button>
-                    </div>            
-                </mat-form-field>    
-            </form>
-        </mat-card> 
-    </div>
-</div>
-
+<mat-card *ngIf="!card" class="matcard">
+    <input placeholder="Take a note..." class="input" (click)="cardSwap()" />
+</mat-card>
+<mat-card class="list-view-mat-card" *ngIf="card">
+    <form [formGroup]="createNotesForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Title" name="title" formControlName="Title">
+        <p>
+            <textarea name="content" placeholder="Take a note"></textarea>
+            <!-- <textarea name="content" placeholder="Take a note" formControlName="TakeNote"></textarea> -->
+        </p>
+        <div class="border">
+            <button mat-icon-button>
+                <mat-icon>notifications_paused</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>person_add</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>color_lens</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>crop_original</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>archive</mat-icon>
+            </button>
+            <button mat-button class="close" (click)="cardSwap()">
+                Close
+            </button>
+        </div>
+    </form>
+</mat-card>

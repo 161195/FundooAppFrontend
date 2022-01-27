@@ -29,9 +29,8 @@ export class CreateNotesComponent implements OnInit {
     {
       console.log(this.createNotesForm.value);
       let CreateNote={
-       Title:this.createNotesForm.value.title
-     
-          
+       Title:this.createNotesForm.value.title,
+       message:this.createNotesForm.value.TakeNote  
     }
     //  this.user.userCreateNotes(CreateNote).subscribe((response:any)=>{
     //    console.log(response)

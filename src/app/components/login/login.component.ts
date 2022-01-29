@@ -30,7 +30,9 @@ export class LoginComponent implements OnInit {
       
      }
      this.user.userLogin(login).subscribe((response:any)=>{
+      localStorage.setItem('token',response.result.jwtToken)
        console.log(response)
+     
      })
     }
     else

@@ -24,6 +24,8 @@ import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.c
 import {MatListModule} from '@angular/material/list';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import {MatCardHarness} from '@angular/material/card/testing';
+import { IconComponent } from './components/icon/icon.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import {MatCardHarness} from '@angular/material/card/testing';
     DashboardComponent,
     CreateNotesComponent,
     GetAllNotesComponent,
-    DisplayNotesComponent 
+    DisplayNotesComponent,
+    IconComponent,
+   
   ],
   imports: [
     BrowserModule,

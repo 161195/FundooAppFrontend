@@ -27,6 +27,7 @@ mat-sidenav{
   margin-top: 2px;
   margin-left: 20px;
   text-align: center;
+    border: none;
 
 }
 mat-sidenav-content {
@@ -60,6 +61,7 @@ mat-nav-list {
   // justify-content: space-between;
   border: transparent;
   background-color: white;
+  opacity:0.6;
 
 }
 #sidenav-icon {
@@ -70,6 +72,9 @@ mat-nav-list {
   opacity: 0.5;
   border: 5px solid transparent;
 
+}
+mat-icon-button{
+  border: none;
 }
 
  

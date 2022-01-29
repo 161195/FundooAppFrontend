@@ -11,7 +11,7 @@ export class CreateNotesComponent implements OnInit {
   createNotesForm!: FormGroup;
   submitted = true; 
   card: boolean = false;
- token:any;
+  token:any;
   constructor(private formBuilder: FormBuilder,private user: NoteServiceService ) {}
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class CreateNotesComponent implements OnInit {
  }
  cardSwap() {
   console.log(this.card);
-  return this.card === true ? (this.card = false) : (this.card = true);
+   return this.card === true ? (this.card = false) : (this.card = true); //condition operator
 }
   onSubmit() { 
   this.submitted=true;

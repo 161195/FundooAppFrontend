@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/service/userService/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = true;
 
-  constructor(private formBuilder: FormBuilder,private user: UserService) { }
+  constructor(private formBuilder: FormBuilder,private user: UserService,private route:Router) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -21,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() { 
     this.submitted=true;
+    this.route.navigateByUrl('dashboard/notes')
     if(this.loginForm.valid)
     {
       console.log(this.loginForm.value);

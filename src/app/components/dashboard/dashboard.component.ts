@@ -12,11 +12,23 @@ import { refresh } from "src/app/utility/util";
 export class DashboardComponent implements OnInit {
   dashboardForm!: FormGroup;
   submitted = true;
+  isMenuOpen=true;
+  contentMargin=200;
 
   constructor(private formBuilder: FormBuilder,private user: UserService) {
   }
 
   ngOnInit(): void {
+  }
+  onToolbarMenuToggle(){
+    this.isMenuOpen = !this.isMenuOpen;
+    if(!this.isMenuOpen)
+    {
+      this.contentMargin=50;
+    }
+    else{
+      this.contentMargin=400;
+    }
   }
   refreshButton() {
     refresh();

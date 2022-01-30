@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() { 
     this.submitted=true;
-    this.route.navigateByUrl('dashboard/notes')
+    
     if(this.loginForm.valid)
     {
       console.log(this.loginForm.value);
@@ -34,7 +34,10 @@ export class LoginComponent implements OnInit {
      this.user.userLogin(login).subscribe((response:any)=>{
       localStorage.setItem('token',response.result.jwtToken)
        console.log(response)
-     
+      if(response.success == true)
+      {
+        this.route.navigateByUrl('dashboard/notes')
+      }
      })
     }
     else

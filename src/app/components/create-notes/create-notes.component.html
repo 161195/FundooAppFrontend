@@ -2,16 +2,17 @@
     <input placeholder="Take a note..." class="input" (click)="cardSwap()" />
 </mat-card>
 <mat-card class="list-view-mat-card" *ngIf="card">
-    <form [formGroup]="createNotesForm" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Title" name="title" formControlName="Title">
+    <form [formGroup]="createNotesForm">
+        <input type="text" placeholder="Title" name="title" formControlName="title">
         <p>
             <textarea name="content" placeholder="Take a note" formControlName="TakeNote"></textarea>
         </p>
+        
         <div class="border">
             <app-icon></app-icon>
-            <button mat-button class="close" (Click)="onSubmit()">
+            <button mat-stroked-button class="close" (click)="cardSwap()" (click)="onSubmit()">
                 Close
             </button>
-        </div>   
+        </div>
     </form>
 </mat-card>

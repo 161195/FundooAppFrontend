@@ -16,7 +16,7 @@ export class CreateNotesComponent implements OnInit {
 
   ngOnInit(): void {
     this.createNotesForm = this.formBuilder.group({
-      Title: [null, Validators.required],
+      title: [null, Validators.required],
       TakeNote: [null, Validators.required],
   });
   this.token=localStorage.getItem('token');
@@ -31,7 +31,7 @@ export class CreateNotesComponent implements OnInit {
     {
       console.log(this.createNotesForm.value);
       let CreateNote={
-       Title:this.createNotesForm.value.title,
+       title:this.createNotesForm.value.title,
        message:this.createNotesForm.value.TakeNote,  
     }
      this.user.userCreateNotes(CreateNote,this.token).subscribe((response:any)=>{

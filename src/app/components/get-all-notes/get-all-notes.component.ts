@@ -8,19 +8,20 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
 })
 export class GetAllNotesComponent implements OnInit {
   token:any;
-  submitted =true; 
+  notelist:any;
 
   constructor(private user: NoteServiceService) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token');
+    this.getAllNotes();
   }
   
-  onSubmit() { 
-    this.submitted=true;
-     
+  getAllNotes() { 
        this.user.userGetAllNotes(this.token).subscribe((response:any)=>{
-         console.log(response)
+         console.log(response.userlist)
+        this.notelist=response.userlist
+        this.notelist.reverse()
        })
       }
       

@@ -25,6 +25,7 @@ import {MatListModule} from '@angular/material/list';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import {MatCardHarness} from '@angular/material/card/testing';
 import { IconComponent } from './components/icon/icon.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { IconComponent } from './components/icon/icon.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatCardModule,
    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

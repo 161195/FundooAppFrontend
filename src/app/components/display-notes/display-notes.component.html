@@ -1,1 +1,10 @@
-<!-- <p>display-notes works!</p> -->
+<div class="displayNotes">
+    <div *ngFor="let notes of notesArraylist;" class="getAllNotes">
+        <button class="pinbutton" >
+            <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
+          </button>
+          <h2 class="heading">{{notes.title}}</h2>
+          <p>{{notes.message}}</p>
+          <app-icon></app-icon>
+    </div>
+</div>

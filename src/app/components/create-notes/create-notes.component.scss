@@ -6,6 +6,7 @@ form{
   padding: 7px;
   border-radius: 7px;
   box-shadow: 0 1px 7px rgb(126, 124, 124);
+ 
 }
 
 form input{
@@ -25,6 +26,40 @@ form textarea{
   resize: none;
 }
 
+button{
+    margin: 14px;
+}
+
+.input {
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0px solid;
+  min-height: 10px;
+  outline: none;
+  
+}
+
+.matcard{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 7px rgb(126, 124, 124);
+  border: 5px solid transparent;
+  height: 40px;
+  width: 600px;
+  display: flex;
+  align-items: center; 
+  margin-left: 34%;
+  margin: 32px auto 50px auto;
+ 
+}
+
+.close{
+  margin: 200px;
+  border: none;
+  background-color: #fff;
+
+}
 .border {
   border: 5px solid transparent;
   height: 20px;
@@ -35,38 +70,3 @@ form textarea{
   justify-content: space-between;
   background-color: transparent
 }
-button{
-    margin: 14px;
-    border:none;
-    background: #fff;
-}
-.input {
-  width: 100%;
-  font-size: 16px;
-  background-color: transparent;
-  border: 0px solid;
-  min-height: 10px;
-  outline: none;
-}
-.matcard{
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 7px rgb(126, 124, 124);
-  border: 5px solid transparent;
-  height: 40px;
-  width: 600px;
-  top: 100px;
-  display: flex;
-  align-items: center; 
-  margin-left: 34%;
-  margin: 32px auto 50px auto;
-  margin-top: 2em;
-}
-
-.close{
-  // padding-left: 10em;
-  margin-left: 100px;
-}
-  
-  
- 

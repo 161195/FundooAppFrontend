@@ -23,8 +23,7 @@ export class GetAllNotesComponent implements OnInit {
         this.notelist=response.userlist
         this.notelist.reverse()
        })
-      }
-      
+      } 
  }
   
 

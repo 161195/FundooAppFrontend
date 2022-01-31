@@ -6,7 +6,7 @@ import { HttpService } from '../httpService/http.service';
   providedIn: 'root'
 })
 export class NoteServiceService {
- token:any;
+token:any;
   constructor(private httpService:HttpService) { 
   }
 
@@ -29,4 +29,15 @@ export class NoteServiceService {
     return this.httpService.getService('/Note',true,header);
 
   }
+  userUpdateNotes(data:any,token:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+      })
+    }
+    return this.httpService.putService('/Note/'+data.id ,data,true,header);
+    //`/Note/${id}`
+  }
+
 }

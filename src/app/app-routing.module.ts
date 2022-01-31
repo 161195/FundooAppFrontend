@@ -9,13 +9,14 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 
+
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'forgetPassword',component:ForgetPasswordComponent},
   {path:'resetPassword/:token',component:ResetPasswordComponent},
   // {path:'createNotes',component:CreateNotesComponent},
-
+  
   {path:'dashboard',component:DashboardComponent,
   children:[
     {path:'', redirectTo:"/dashboard/notes", pathMatch:'full' },

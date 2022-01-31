@@ -26,6 +26,9 @@ import { DisplayNotesComponent } from './components/display-notes/display-notes.
 import {MatCardHarness} from '@angular/material/card/testing';
 import { IconComponent } from './components/icon/icon.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { UpdateNotesComponent } from './components/update-notes/update-notes.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -40,6 +43,8 @@ import {MatCardModule} from '@angular/material/card';
     GetAllNotesComponent,
     DisplayNotesComponent,
     IconComponent,
+    UpdateNotesComponent,
+    
    
   ],
   imports: [
@@ -52,6 +57,7 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatDialogModule,
    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

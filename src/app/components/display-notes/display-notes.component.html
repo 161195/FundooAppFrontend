@@ -1,10 +1,47 @@
-<div class="displayNotes">
+<div class="section" fxLayout="row wrap" fxLayoutGap="25px grid" fxLayoutAlign="start center">
+  <div fxFlex=25% fxFlex.xs=100% *ngFor="let notes of notesArraylist;">
+    <mat-card class="example-card" (click)="openDialog(notes)">
+      <button class="pinbutton">
+        <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
+      </button>
+      <mat-card-title>
+        {{notes.title }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ notes.message }}
+      </mat-card-subtitle>
+      <mat-card-content>
+        <app-icon [CardObject]="notes"></app-icon>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="displayNotes">
     <div *ngFor="let notes of notesArraylist;" class="getAllNotes">
+        <mat-card-title-group (click)="openDialog(notes)">
         <button class="pinbutton" >
             <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
           </button>
           <h2 class="heading">{{notes.title}}</h2>
           <p>{{notes.message}}</p>
-          <app-icon></app-icon>
-    </div>
-</div>
+        </mat-card-title-group>
+        <mat-card-content >
+          <app-icon class="getAllNotes"  [CardObject]= "notes" ></app-icon>
+          <!-- <app-icon class="getAllNotes"  [CardObject]= "notes" (changeColorOfNote)="messageRecievedFromNote($event)"></app-icon> -->
+<!-- </mat-card-content > -->
+<!-- </div> -->
+<!-- </div> -->

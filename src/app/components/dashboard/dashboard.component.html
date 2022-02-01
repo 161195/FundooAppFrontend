@@ -31,7 +31,7 @@
             <div class="menu-container">
                 <mat-nav-list>
                     <div>
-                        <button mat-button id="sidenav-button">
+                        <button mat-button id="sidenav-button" (click)="Notes()">
                             <mat-icon id="sidenav-icon">lightbulb_outline</mat-icon>
                             Notes
                         </button>
@@ -49,7 +49,7 @@
                         </button>
                     </div>
                     <div>
-                        <button mat-button id="sidenav-button">
+                        <button mat-button id="sidenav-button" (click)="Trash()">
                             <mat-icon id="sidenav-icon">delete_outline</mat-icon>
                             Trash
                         </button>

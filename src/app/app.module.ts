@@ -29,7 +29,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { UpdateNotesComponent } from './components/update-notes/update-notes.component';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatMenuModule} from '@angular/material/menu';
+import { TrashNotesComponent } from './components/trash-notes/trash-notes.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     DisplayNotesComponent,
     IconComponent,
     UpdateNotesComponent,
+    TrashNotesComponent,
     
    
   ],
@@ -58,7 +61,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatListModule,
     MatCardModule,
     MatDialogModule,
-   
+    MatMenuModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

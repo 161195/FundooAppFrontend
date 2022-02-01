@@ -37,7 +37,25 @@ token:any;
       })
     }
     return this.httpService.putService('/Note/'+data.id ,data,true,header);
-    //`/Note/${id}`
   }
+  userDeleteNotes(data:any,token:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+      })
+    }
+    return this.httpService.deleteService('/Note/'+data.id+'/Delete',data,header);
+  }
+  userTrashNotes(data:any,token:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+      })
+    }
+    return this.httpService.putService('/Note/'+data.id+'/Trash',true,data,header);
+  }
+
 
 }

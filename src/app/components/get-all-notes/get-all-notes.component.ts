@@ -9,7 +9,7 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
 export class GetAllNotesComponent implements OnInit {
   token:any;
   notelist:any;
-
+  myNoteList:any;
   constructor(private user: NoteServiceService) { }
 
   ngOnInit(): void {
@@ -18,12 +18,16 @@ export class GetAllNotesComponent implements OnInit {
   }
   
   getAllNotes() { 
-       this.user.userGetAllNotes(this.token).subscribe((response:any)=>{
-         console.log(response.userlist)
-        this.notelist=response.userlist
-        this.notelist.reverse()
-       })
-      } 
+    this.user.userGetAllNotes(this.token).subscribe((response:any)=>{
+      this.notelist=response.userlist.filter((result:any)=>{
+
+        this.myNoteList= result.isTrash === false
+        return this.myNoteList
+      })
+      this.notelist.reverse()
+    })
+    } 
+
  }
   
 

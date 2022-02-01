@@ -26,7 +26,6 @@ token:any;
       id: this.userlist.noteId,
       title: this.title,
       message: this.message,
-  
     }
 
     this.user.userUpdateNotes(data,this.token).subscribe((response:any)=>{

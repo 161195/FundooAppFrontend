@@ -27,7 +27,7 @@ export class IconComponent implements OnInit {
       console.log(response)
       this.dataservice.sendData(response)
     })
-  
+    // window.location.reload();
   }
   archiveNote(){
     let data = {
@@ -39,7 +39,7 @@ export class IconComponent implements OnInit {
       console.log(response)
       this.dataservice.sendData(response)
     })
-    
+    // window.location.reload();
   }
 
 }

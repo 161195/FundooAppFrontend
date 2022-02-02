@@ -1,7 +1,6 @@
 .menu{
-  border-color:gray;
+  border-color:white;
 }
-
 .Search{
   margin-left: 10em;
   margin-top: 1em;
@@ -22,6 +21,7 @@ mat-sidenav{
   background-color: white;
   width: 10em;
   border: none;
+  margin-left: 20px;
 }
 .menu-container {
   border-top: 70px;
@@ -84,6 +84,7 @@ mat-icon-button{
 .checkmenu
 {
   border:none;
+  background: #fff;
 }
 #sidenav.menu-close{
   width: 60px;
@@ -98,6 +99,10 @@ mat-icon-button{
   height: 88vh;
   background: #fff;
   border: none;
+}
+.example-toolbar
+{
+  background-color: #fff;
 }
 
 

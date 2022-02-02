@@ -16,11 +16,17 @@ export class DashboardComponent implements OnInit {
   submitted = true;
   isMenuOpen=true;
   contentMargin=200;
+  mobileQuery: MediaQueryList;
+  private _mobileQueryListener: () => void;
 
-  constructor(private formBuilder: FormBuilder,private user: UserService,private route:Router) {
+  constructor(private formBuilder: FormBuilder,private user: UserService,private route:Router,changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
   ngOnInit(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
   //for sidenav open close with fixed icons
   onToolbarMenuToggle(){

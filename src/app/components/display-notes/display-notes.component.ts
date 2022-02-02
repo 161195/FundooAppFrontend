@@ -29,9 +29,9 @@ message : any;
     });
   }
 
-  // messageRecievedFromNote(e:any){
-  //   console.log(e);
-  // }
+  messageRecievedFromNote(e:any){
+    console.log(e);
+  }
   ngOnInit(): void{
 
   }

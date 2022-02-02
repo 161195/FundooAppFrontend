@@ -32,6 +32,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { TrashNotesComponent } from './components/trash-notes/trash-notes.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { ArchiveNotesComponent } from './components/archive-notes/archive-notes.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     IconComponent,
     UpdateNotesComponent,
     TrashNotesComponent,
+    ArchiveNotesComponent,
     
    
   ],

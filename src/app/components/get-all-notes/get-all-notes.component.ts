@@ -20,8 +20,7 @@ export class GetAllNotesComponent implements OnInit {
   getAllNotes() { 
     this.user.userGetAllNotes(this.token).subscribe((response:any)=>{
       this.notelist=response.userlist.filter((result:any)=>{
-
-        this.myNoteList= result.isTrash === false
+        this.myNoteList= result.isTrash === false && result.isArchive === false
         return this.myNoteList
       })
       this.notelist.reverse()

@@ -1,4 +1,3 @@
-<!-- <p>icon works!</p> -->
 <div class="border">
     <button mat-icon-button >
         <mat-icon>notifications_paused</mat-icon>
@@ -14,20 +13,16 @@
        
         <mat-icon>image</mat-icon>
     </button>
-    <button mat-icon-button>
+    <button mat-icon-button (click)="archiveNote()">
         <mat-icon>archive_outlined</mat-icon>
     </button>
-    <!-- <button mat-icon-button>
-        <mat-icon>more_vert</mat-icon>
-    </button> -->
     <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon matTooltip="More" style="padding-left: 25px;">more_vert</mat-icon>
+        <mat-icon matTooltip="More" style="padding-left: -25px;">more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item class="matMenu" (click)="deleteNote()">
             <span >Delete note</span>
         </button>
     </mat-menu>
-
 </div>
 

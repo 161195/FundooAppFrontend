@@ -2,6 +2,7 @@ import { Component,Input, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
 import {DataServiceService} from 'src/app/service/dataService/data-service.service';
 
+
 @Component({
   selector: 'app-icon',
   templateUrl: './icon.component.html',
@@ -26,7 +27,19 @@ export class IconComponent implements OnInit {
       console.log(response)
       this.dataservice.sendData(response)
     })
-    // window.location.reload();
+  
+  }
+  archiveNote(){
+    let data = {
+      id: [this.CardObject.noteId],
+      isArchive: false,
+    } 
+    this.user.userArchiveNotes(data,this.token).subscribe((response:any)=>{
+      console.log("Note has been archived")
+      console.log(response)
+      this.dataservice.sendData(response)
+    })
+    
   }
 
 }

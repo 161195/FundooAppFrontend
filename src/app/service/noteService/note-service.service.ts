@@ -38,15 +38,15 @@ token:any;
     }
     return this.httpService.putService('/Note/'+data.id ,data,true,header);
   }
-  userDeleteNotes(data:any,token:any){
-    let header={
-      headers:new HttpHeaders({
-        'Content-Type': 'application/json-patch+json',
-        Authorization:'Bearer '+ token
-      })
-    }
-    return this.httpService.deleteService('/Note/'+data.id+'/Delete',data,header);
-  }
+  // userDeleteNotes(data:any,token:any){
+  //   let header={
+  //     headers:new HttpHeaders({
+  //       'Content-Type': 'application/json-patch+json',
+  //       Authorization:'Bearer '+ token
+  //     })
+  //   }
+  //   return this.httpService.deleteService('/Note/'+data.id+'/Delete',data,header);
+  // }
   userTrashNotes(data:any,token:any){
     let header={
       headers:new HttpHeaders({
@@ -55,6 +55,15 @@ token:any;
       })
     }
     return this.httpService.putService('/Note/'+data.id+'/Trash',true,data,header);
+  }
+  userArchiveNotes(data:any,token:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+      })
+    }
+    return this.httpService.putService('/Note/'+data.id+'/Archive',true,data,header);
   }
 
 

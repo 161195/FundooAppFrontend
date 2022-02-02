@@ -8,7 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import{TrashNotesComponent} from './components/trash-notes/trash-notes.component';
-
+import{ArchiveNotesComponent} from './components/archive-notes/archive-notes.component';
 
 const routes: Routes = [
   {path:'', redirectTo:"/login", pathMatch:'full' },
@@ -24,7 +24,7 @@ const routes: Routes = [
     {path:'', redirectTo:"/dashboard/notes", pathMatch:'full' },
     {path:'notes', component:GetAllNotesComponent},
     {path:'trash',component:TrashNotesComponent},
-
+    {path:'archive',component:ArchiveNotesComponent}
   ]}
 ];
 

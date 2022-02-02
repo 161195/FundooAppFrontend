@@ -44,6 +44,10 @@ export class DashboardComponent implements OnInit {
   Trash(){
     this.route.navigateByUrl('dashboard/trash')
   }
+  //to navigate to archive listpage
+  Archive(){
+    this.route.navigateByUrl('dashboard/archive')
+  }
 
 
 }

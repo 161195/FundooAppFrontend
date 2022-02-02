@@ -1,8 +1,8 @@
 <div class="section" fxLayout="row wrap" fxLayoutGap="25px grid" fxLayoutAlign="start center">
   <div fxFlex=25% fxFlex.xs=100% *ngFor="let notes of notesArraylist;">
     <mat-card class="example-card">
-      <button class="pinbutton">
-        <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
+      <button class="pinbutton" >
+        <img class="pin" style="padding-left: 160px;" src="../../../assets/push_pin_black_24dp.svg" alt="">
       </button>
       <mat-card-title  (click)="openDialog(notes)">
         {{notes.title }}

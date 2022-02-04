@@ -10,9 +10,9 @@
   }
   button{
       // margin: 5px;
-      border:none;
-      background: #fff;
-      opacity:0.6;
+     border:none;
+     background:none;
+     opacity:0.6;
       
   }
   .matMenu{
@@ -29,3 +29,30 @@
     opacity: 0.5;
     color: black;
 }
+.card{
+  background-color: #fff;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.color{
+  display: grid;
+  margin-right: 10px;
+  cursor: pointer;
+}
+// .matMenu1{
+//   height: 20px;
+//   margin-bottom: 90px;
+//   width: 80%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+

@@ -3,7 +3,6 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 
-
 @Component({
   selector: 'app-display-notes',
   templateUrl: './display-notes.component.html',

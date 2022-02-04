@@ -65,6 +65,15 @@ token:any;
     }
     return this.httpService.putService('/Note/'+data.id+'/Archive',true,data,header);
   }
+  userChangeColorNotes(data:any,token:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+      })
+    }
+    return this.httpService.putService('/Note/'+data.NoteId+'/color',data,true,header);
+  }
 
 
 }

@@ -33,6 +33,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { TrashNotesComponent } from './components/trash-notes/trash-notes.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { ArchiveNotesComponent } from './components/archive-notes/archive-notes.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {TextFieldModule} from '@angular/cdk/text-field';
+
 
 @NgModule({
   declarations: [
@@ -64,6 +67,9 @@ import { ArchiveNotesComponent } from './components/archive-notes/archive-notes.
     MatCardModule,
     MatDialogModule,
     MatMenuModule,
+    MatSnackBarModule,
+    TextFieldModule,
+    MatButtonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

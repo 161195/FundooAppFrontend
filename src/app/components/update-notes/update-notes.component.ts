@@ -33,7 +33,7 @@ token:any;
       console.log(response)
       
     })
-    window.location.reload();
+    // window.location.reload();
     this.dialogRef.close();
   }
 

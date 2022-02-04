@@ -1,4 +1,4 @@
-<app-create-notes></app-create-notes>
+<app-create-notes (autorefreshEvent)="recieveMessage($event)" ></app-create-notes>
 <app-display-notes [notesArraylist]="notelist"></app-display-notes>
 
 

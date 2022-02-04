@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit,Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-create-notes',
@@ -12,7 +14,9 @@ export class CreateNotesComponent implements OnInit {
   submitted = true; 
   card: boolean = false;
   token:any;
-  constructor(private formBuilder: FormBuilder,private user: NoteServiceService ) {}
+  @Output() autorefreshEvent = new EventEmitter<string>();
+
+  constructor(private formBuilder: FormBuilder,private user: NoteServiceService,private snackbar:MatSnackBar ) {}
 
   ngOnInit(): void {
     this.createNotesForm = this.formBuilder.group({
@@ -36,6 +40,11 @@ export class CreateNotesComponent implements OnInit {
     }
      this.user.userCreateNotes(CreateNote,this.token).subscribe((response:any)=>{
        console.log(response)
+       this.autorefreshEvent.emit(response);
+       this.snackbar.open('Note created Successfully !','',{
+        duration: 2000,
+      });
+
      })
     }
     else

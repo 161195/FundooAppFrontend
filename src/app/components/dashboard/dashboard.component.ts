@@ -6,6 +6,7 @@ import { refresh } from "src/app/utility/util";
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -18,6 +19,8 @@ export class DashboardComponent implements OnInit {
   contentMargin=200;
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
+ 
+ 
 
   constructor(private formBuilder: FormBuilder,private user: UserService,private route:Router,changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
@@ -27,7 +30,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+   
   }
+  
   //for sidenav open close with fixed icons
   onToolbarMenuToggle(){
     this.isMenuOpen = !this.isMenuOpen;
@@ -54,6 +59,5 @@ export class DashboardComponent implements OnInit {
   Archive(){
     this.route.navigateByUrl('dashboard/archive')
   }
-
-
+  
 }

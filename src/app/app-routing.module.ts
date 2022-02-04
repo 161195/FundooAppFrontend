@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
@@ -9,6 +8,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import{TrashNotesComponent} from './components/trash-notes/trash-notes.component';
 import{ArchiveNotesComponent} from './components/archive-notes/archive-notes.component';
+import { AuthenticationGuard } from './components/authentication.guard';
 
 const routes: Routes = [
   {path:'', redirectTo:"/login", pathMatch:'full' },
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'resetPassword/:token',component:ResetPasswordComponent},
   // {path:'createNotes',component:CreateNotesComponent},
   
-  {path:'dashboard',component:DashboardComponent,
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:'', redirectTo:"/dashboard/notes", pathMatch:'full' },
     {path:'notes', component:GetAllNotesComponent},

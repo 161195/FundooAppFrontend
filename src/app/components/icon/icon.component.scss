@@ -16,8 +16,8 @@
       
   }
   .matMenu{
-    height: 20px;
-    margin-bottom: 90px;
+    height: 10px;
+    margin-top: 15px;
     width: 80%;
     display: flex;
     align-items: center;
@@ -53,6 +53,11 @@
 //   display: flex;
 //   align-items: center;
 //   justify-content: space-between;
+// }
+// @media screen  and (max-width:700px){
+//   .mat-card-content{
+//     background: red; 
+//   }
 // }
 
 

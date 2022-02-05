@@ -22,7 +22,8 @@ export class ArchiveNotesComponent implements OnInit {
   }
   getAllArchiveNotes(){
     this.user.userGetAllNotes(this.token).subscribe((response:any)=>{
-      this.archiveList=response.userlist.filter((result:any)=>{
+      this.archiveList=response.userlist.filter((result:any)=>
+      {
         this.notesList= result.isArchive === true
         return this.notesList
       })

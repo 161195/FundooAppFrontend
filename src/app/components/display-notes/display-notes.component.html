@@ -1,5 +1,6 @@
 <div class="section" fxLayout="row wrap" fxLayoutGap="15px grid" fxLayoutAlign="start center">
-  <div fxFlex=25% fxFlex.xs=100% *ngFor="let notes of notesArraylist;" >
+  <div fxFlex.sm="100%"*ngFor="let notes of notesArraylist;" >
+    <!-- <div fxFlex.gt-sm="25%"*ngFor="let notes of notesArraylist;" > -->
     <mat-card class="example-card" [style.background]="notes.color">
       <button class="pinbutton" >
         <img class="pin" style="padding-left: 160px;" src="../../../assets/push_pin_black_24dp.svg" alt="">
@@ -10,12 +11,26 @@
       <mat-card-subtitle  (click)="openDialog(notes)">
         {{ notes.message }}
       </mat-card-subtitle>
-      <mat-card-content>
-        <app-icon [CardObject]="notes" (changeColorOfNote)="messageRecievedFromNote($event)"></app-icon>
-      </mat-card-content>
+      <mat-card-actions>
+        <div>
+          <app-icon [CardObject]="notes" (changeColorOfNote)="messageRecievedFromNote($event)"></app-icon>
+        </div>
+      </mat-card-actions>
     </mat-card>
   </div>
 </div>
+
+
+<!--
+   NOTE:=> used interpolation data binding c-v for displaying data to UI which comes from backend  {{notes.title }}
+-->
+<!--
+   NOTE:=> used ngFor directives to show the arraylist
+-->
+
+
+
+
 
 
 

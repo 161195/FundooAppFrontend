@@ -9,10 +9,9 @@ import {DataServiceService} from 'src/app/service/dataService/data-service.servi
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent implements OnInit {
-  @Input() CardObject: any;
+  @Input() CardObject: any;  // getting values from display to icons i.e userlist data(display=parent,icons=child)
   token:any;
-
-  @Output() changeColorOfNote = new EventEmitter<any>();
+  @Output() changeColorOfNote = new EventEmitter<any>();  //posting color to diplay note via event emitter (display=child,icons=parent)
 
   colors = [
     {
@@ -67,7 +66,7 @@ export class IconComponent implements OnInit {
       console.log(response)
       this.dataservice.sendData(response)
     })
-    // window.location.reload();
+    window.location.reload();
   }
   archiveNote(){
     let data = {
@@ -79,7 +78,7 @@ export class IconComponent implements OnInit {
       console.log(response)
       this.dataservice.sendData(response)
     })
-    // window.location.reload();
+    window.location.reload();
   }
 
   changeColor(noteColor:any){

@@ -21,7 +21,7 @@ mat-sidenav{
   background-color: white;
   width: 10em;
   border: none;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .menu-container {
   border-top: 70px;
@@ -37,6 +37,7 @@ mat-sidenav-content {
   height: 100%;
   overflow: auto;
   border: 2px solid transparent;
+  // width:auto;
   
 }
 #sidenav-button:focus {
@@ -85,6 +86,12 @@ mat-icon-button{
 {
   border:none;
   background: #fff;
+}
+.checkmenu1
+{
+  border:none;
+  background: #fff;
+   margin-left: 1em;
 }
 #sidenav.menu-close{
   width: 60px;

@@ -1,4 +1,4 @@
-<div class="dashboard-container" [class.example-is-mobile]="mobileQuery.matches">
+<div class="dashboard-container" [class.dashboard-container]="mobileQuery.matches">
     <mat-toolbar fxLayout="row" class="example-toolbar" fxLayout.xs="row">
         <button mat-icon-button class="checkmenu">
             <mat-icon (click)="onToolbarMenuToggle()" style="color: grey;">menu</mat-icon>
@@ -23,6 +23,12 @@
             </button>
             <button mat-icon-button matTooltip="grid"class="checkmenu">
                 <mat-icon>line_weight</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="grid"class="checkmenu1">
+                <mat-icon>apps</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="grid"class="checkmenu">
+                <mat-icon>account_circle</mat-icon>
             </button>
         </div>
     </mat-toolbar>
@@ -61,8 +67,6 @@
                             Trash
                         </button>
                     </div>
-                 
-
                 </mat-nav-list>
             </div>
         </mat-sidenav>

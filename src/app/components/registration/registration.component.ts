@@ -20,8 +20,7 @@ export class RegistrationComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       ConfirmPassword: ['', [Validators.required, Validators.minLength(6)]],
-   
-  });
+    });
   }
  onSubmit() { 
    this.submitted=true;

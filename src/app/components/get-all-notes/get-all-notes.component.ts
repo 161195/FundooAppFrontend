@@ -21,6 +21,7 @@ export class GetAllNotesComponent implements OnInit {
       this.getAllNotes();
     })
   }
+  
   recieveMessage(e:any){
     console.log(e)
     this.getAllNotes()

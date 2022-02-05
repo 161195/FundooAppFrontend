@@ -5,8 +5,6 @@ import {MediaMatcher} from '@angular/cdk/layout';
 import { refresh } from "src/app/utility/util";
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

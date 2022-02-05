@@ -9,7 +9,8 @@ import { UpdateNotesComponent } from '../update-notes/update-notes.component';
   styleUrls: ['./display-notes.component.scss']
 })
 export class DisplayNotesComponent implements OnInit {
-@Input() notesArraylist:any;
+  //input decorator (child of getallnotes)
+@Input() notesArraylist:any; //for displaying that retrived data which get from getAllList(userList)
 title : any;
 message : any;
 
@@ -27,7 +28,7 @@ message : any;
       this.message = result;
     });
   }
-
+  //for color change
   messageRecievedFromNote(e:any){
     console.log(e);
   }

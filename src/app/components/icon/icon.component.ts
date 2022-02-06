@@ -11,6 +11,7 @@ import {DataServiceService} from 'src/app/service/dataService/data-service.servi
 export class IconComponent implements OnInit {
   @Input() CardObject: any;  // getting values from display to icons i.e userlist data(display=parent,icons=child)
   token:any;
+  showIcons:boolean=true;
   @Output() changeColorOfNote = new EventEmitter<any>();  //posting color to diplay note via event emitter (display=child,icons=parent)
 
   colors = [
@@ -59,10 +60,10 @@ export class IconComponent implements OnInit {
   deleteNote(){
     let data = {
       id: [this.CardObject.noteId],
-      isTrash: false,
+      isTrash: true,
     }  
     this.user.userTrashNotes(data,this.token).subscribe((response:any)=>{
-      console.log("Note has been deleted")
+      console.log("Note has been trashed")
       console.log(response)
       this.dataservice.sendData(response)
     })
@@ -89,10 +90,18 @@ export class IconComponent implements OnInit {
     }
     this.user.userChangeColorNotes(data,this.token).subscribe((response:any)=>{
       console.log(response)
-      this.changeColorOfNote.emit(noteColor)
+      this.changeColorOfNote.emit(noteColor)  
     })
     window.location.reload();
  
+  }
+  deletePermanently(){
+    let data={
+      notesId: [this.CardObject.noteId]
+    }
+    this.user.userDeleteNotes(data,this.token).subscribe((response:any)=>{
+      this.dataservice.sendData(response)
+    })
   }
 
 }

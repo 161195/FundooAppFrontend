@@ -8,7 +8,7 @@
             <textarea name="content" placeholder="Take a note" formControlName="TakeNote"></textarea>
         </p>
         <div class="border">
-            <app-icon></app-icon>
+            <app-icon [CardObject]="{isTrash:false,isArchive:false}"></app-icon>
             <button mat-stroked-button class="close" (click)="onSubmit()" (click)="cardSwap()" >
                 Close
             </button>

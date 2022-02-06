@@ -59,5 +59,26 @@
 //     background: red; 
 //   }
 // }
+.trashIcons{
+  border: 5px solid transparent;
+    height: 20px;
+    width: 50%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-left: 20%;
+    justify-content: space-between;
+}
+.ArchiveNotesIcon{
+  border: 5px solid transparent;
+    height: 20px;
+    width: 50%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-left: -5%;
+}
 
 

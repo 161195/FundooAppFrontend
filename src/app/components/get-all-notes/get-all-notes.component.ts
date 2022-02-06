@@ -21,7 +21,7 @@ export class GetAllNotesComponent implements OnInit {
       this.getAllNotes();
     })
   }
-  
+  //for auto refresh
   recieveMessage(e:any){
     console.log(e)
     this.getAllNotes()

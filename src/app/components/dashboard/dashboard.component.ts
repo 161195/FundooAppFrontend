@@ -18,8 +18,6 @@ export class DashboardComponent implements OnInit {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
  
- 
-
   constructor(private formBuilder: FormBuilder,private user: UserService,private route:Router,changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -56,6 +54,10 @@ export class DashboardComponent implements OnInit {
   //to navigate to archive listpage
   Archive(){
     this.route.navigateByUrl('dashboard/archive')
+  }
+  Logout(){
+    localStorage.removeItem('token');
+    this.route.navigateByUrl('/login')
   }
   
 }

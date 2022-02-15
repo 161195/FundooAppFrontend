@@ -37,6 +37,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {TextFieldModule} from '@angular/cdk/text-field';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,8 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     MatMenuModule,
     MatSnackBarModule,
     TextFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
